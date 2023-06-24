@@ -1,9 +1,9 @@
-import { Navigate, Route, Routes } from 'react-router';
-
-import { DCPages, MarvelPages } from '../heroes/Pages/index.js';
+import { Route, Routes } from 'react-router';
 import { LoginPages } from '../auth/pages/LoginPages';
-import { Navbar } from '../ui';
 import { HerosRouts } from '../heroes/index.js';
+import { PrivateRoute } from './PrivateRoute.jsx';
+import { PublicRoute } from './PublicRoute';
+
 
 export const AppRouter = () => {
   return (
@@ -12,11 +12,22 @@ export const AppRouter = () => {
 
     <Routes>
      
-      <Route path="login" element={ <LoginPages /> } />
-      <Route path="/*" element={ <HerosRouts /> } />
+      <Route path="login/*" element={
+      <PublicRoute>
+        <Routes>
+          <Route path="/*" element={<LoginPages />}/>        
+        </Routes>
+      </PublicRoute>
+      } />
+      {/* <Route path="/*" element={ <HerosRouts /> } /> */}
 
-     
-     </Routes>
+
+      <Route path="/*" element={
+        <PrivateRoute>
+          <HerosRouts />
+       </PrivateRoute>
+      } />
+    </Routes>
     </>
   )
 }
