@@ -2,10 +2,10 @@
 # " https://monumental-madeleine-05800e.netlify.app/marvel "
 Super heros description to 'DC Comics' and 'Marvel Comics'
 
-#Buscador de Heroes creado con React.js 
-#bootstrap 
-#Exelente manejo de Rutas con React Router Dom
-#manejo de props.
+Buscador de Heroes creado con React.js 
+bootstrap 
+Exelente manejo de Rutas con React Router Dom
+manejo de props.
 
 Proyecto con un Login de autenticacion, almacenando informacion de
 autenticacion en el Localstorage
