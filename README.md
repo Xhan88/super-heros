@@ -3,6 +3,7 @@
 Super heros description to 'DC Comics' and 'Marvel Comics'
 
 Buscador de Heroes creado con React.js 
+run whit Yarn dev " yarn dev "
 bootstrap 
 Exelente manejo de Rutas con React Router Dom
 manejo de props.
